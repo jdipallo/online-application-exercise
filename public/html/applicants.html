@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="JobApp">
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+  </head>
+
+  <body ng-controller="applicantsController as Ctrl">
+	  
+    <div class="container">
+      <h1>Applicants</h1>
+      <table id="applications" class="table table-striped">
+        <tr ng-repeat="applicants in Ctrl.applicants">
+           <td> {{ applicants.name }} </td>
+           <td> {{ applicants.bio }} </td>
+           <td> {{ applicants.skills }} </td>
+           <td> {{ applicants.years }} </td>
+           <td> {{ applicants.why }} </td>
+        </tr>
+      </table>
+    </div>
+	  
+	<script src="/javascripts/main.js"></script>
+
+  </body>
+</html>
